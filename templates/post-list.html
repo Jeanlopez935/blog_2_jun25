@@ -4,7 +4,7 @@
     <h2>Blog Posts</h2>
     <ul>
         {% for post in post_list %}
-            <li>{{ post.title }} por
+            <li><a href="{% url 'post-detail' post.pk %}">{{ post.title }}</a> por
                 {{ post.author }} -
                 {{ post.created_at }}
             </li>
