@@ -8,4 +8,6 @@
     <p>Última actualización: {{ post.updated_at|date:"d/m/Y" }}</p>
     <!-- Enlace para editar -->
     <a href="{% url 'post-update' post.pk %}">Editar</a>
+    <!-- Enlace para eliminar -->
+    <a href="{% url 'post-delete' post.pk %}">Eliminar</a>
 {% endblock content %}
