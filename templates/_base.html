@@ -11,7 +11,9 @@
 <body>
     <header>
         <a href= "{% url 'post-list' %}"><h1>Blog de Miguel</h1></a>
-    </header>      
+        <!-- enlace para nuevo post -->
+        <a href="{% url 'post-create' %}">Crear nuevo post</a>
+    </header>
     {% block content %}
 
     {% endblock %}
