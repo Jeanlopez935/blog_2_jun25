@@ -1,3 +1,8 @@
-h1 {
+header h1 {
     color: green
+}
+.manufacturing-consent-regular {
+  font-family: "Manufacturing Consent", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
