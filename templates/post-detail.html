@@ -4,10 +4,12 @@
     <h1>{{ post.title }}</h1>
     <p>Autor: {{ post.author.username }}</p>
     <p>Publicado el {{ post.created_at|date:"d/m/Y" }}</p>
-    <p>{{ post.content }}</p>
     <p>Última actualización: {{ post.updated_at|date:"d/m/Y" }}</p>
-    <!-- Enlace para editar -->
+    <p>{{ post.content }}</p>
+
+    <!-- Validar si el usuario es el autor del post-->
+    {% if user.is_authenticated and user == post.author %}
     <a href="{% url 'post-update' post.pk %}">Editar</a>
-    <!-- Enlace para eliminar -->
     <a href="{% url 'post-delete' post.pk %}">Eliminar</a>
+    {% endif %}
 {% endblock content %}
