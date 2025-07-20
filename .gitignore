@@ -1,2 +1,3 @@
 .venv/
-# si
+*.pyc
+__pycache__/
